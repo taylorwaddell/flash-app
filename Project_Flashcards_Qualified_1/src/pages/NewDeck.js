@@ -1,8 +1,16 @@
 import React from 'react';
 import DeckForm from "../utils/DeckForm";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
+import { createDeck } from "../utils/api";
 
 function NewDeck(props) {
+    const history = useHistory();
+    function submitHandler(deck){
+        createDeck(deck).then((saveDeck) => history.push(`/decks/${saveDeck.id}`))
+    }
+    function cancel(){
+        history.goBack();
+    }
     return (
         <div className="container">
             <div className="row">
@@ -14,7 +22,7 @@ function NewDeck(props) {
                 </nav>
             </div>
             <div className="row">
-                <DeckForm />
+                <DeckForm onCancel={cancel} onSubmit={submitHandler} />
             </div>
         </div>
     );

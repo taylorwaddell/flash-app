@@ -1,4 +1,4 @@
-import { deleteDeck, deleteCard } from "../utils/api/index";
+import { deleteDeck, deleteCard } from "./api/index";
 
 export default async function handleDelete(isDeck, id) {
     const abortController = new AbortController();

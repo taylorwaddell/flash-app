@@ -33,7 +33,7 @@ function DeckView() {
   }
   
   return (
-    <div className="container">
+    <main className="container">
       <nav aria-label="breadcrumb">
         <ol className="breadcrumb">
           <li className="breadcrumb-item">
@@ -66,13 +66,9 @@ function DeckView() {
         <div className="row">
           <h2>Cards</h2>
         </div>
-        <div className="row">
-          <div className="col col-12 mb-4">
-            <CardList deck={deck} onCardDelete={deleteCardHandler} />
-          </div>
-        </div>
       </div>
-    </div>
+      <CardList deck={deck} onCardDelete={deleteCardHandler} />
+    </main>
   );
 }
 

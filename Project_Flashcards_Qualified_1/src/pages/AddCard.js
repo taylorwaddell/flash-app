@@ -33,6 +33,7 @@ function AddCard() {
           </ol>
         </nav>
       </div>
+      
       <CardForm initialStateDeck={deck} onSubmit={submitHandler} onDone={doneHandler} deckName={deck.name} />
     </div>
   );

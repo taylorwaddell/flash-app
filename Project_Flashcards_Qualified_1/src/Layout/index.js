@@ -22,7 +22,7 @@ function Layout() {
           <Study />
         </Route>
         <Route path="/decks/:deckId/edit">
-          <EditDeck isNewDeck={false} />
+          <EditDeck />
         </Route>
         <Route path="/decks/:deckId/cards/new">
           <AddCard />

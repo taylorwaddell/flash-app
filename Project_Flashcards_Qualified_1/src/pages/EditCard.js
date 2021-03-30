@@ -23,7 +23,6 @@ function EditCard() {
     <CardForm
       onSubmit={submitHandler}
       onDone={doneHandler}
-      deckName={deck.name}
       initialState={card}
       doneButtonLabel="Cancel"
     />
@@ -31,7 +30,7 @@ function EditCard() {
     <p>Loading...</p>
   );
   return (
-    <>
+    <div>
       <nav aria-label="breadcrumb">
         <ol className="breadcrumb">
           <li className="breadcrumb-item">
@@ -49,7 +48,7 @@ function EditCard() {
       </nav>
       <h2>Edit Card</h2>
       {child}
-    </>
+    </div>
   );
 }
 

@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 
 function CardList({ deck, onCardDelete }) {
   const { cards=[] } = deck; 
-  const cardList = cards.map((card, index) => {
+  const cardList = cards.map((card) => {
     return (
-      <li key={index} className="list-group-card ">
+      <li key={card.id} className="list-group-card ">
         <div className="card-body">
           <div className="d-flex justify-content-between">
             <p className="card-text">{card.front}</p>
